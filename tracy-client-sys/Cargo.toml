@@ -42,3 +42,5 @@ only-localhost = []
 # Do not use IPv6
 # Defines `TRACY_ONLY_IPV4`
 only-ipv4 = []
+# Use lower-resolution timer when invariant TSC is not supported.
+timer-fallback = []

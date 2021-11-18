@@ -34,6 +34,9 @@ fn set_feature_defines(mut c: cc::Build) -> cc::Build {
     if std::env::var_os("CARGO_FEATURE_ONLY_IPV4").is_some() {
         c.define("TRACY_ONLY_IPV4", None);
     }
+    if std::env::var_os("CARGO_FEATURE_TIMER_FALLBACK").is_some() {
+        c.define("TRACY_TIMER_FALLBACK", None);
+    }
     c
 }
 
