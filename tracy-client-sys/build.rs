@@ -25,6 +25,15 @@ fn set_feature_defines(mut c: cc::Build) -> cc::Build {
     if std::env::var_os("CARGO_FEATURE_ONDEMAND").is_some() {
         c.define("TRACY_ON_DEMAND", None);
     }
+    if std::env::var_os("CARGO_FEATURE_NO_BROADCAST").is_some() {
+        c.define("TRACY_NO_BROADCAST", None);
+    }
+    if std::env::var_os("CARGO_FEATURE_ONLY_LOCALHOST").is_some() {
+        c.define("TRACY_ONLY_LOCALHOST", None);
+    }
+    if std::env::var_os("CARGO_FEATURE_ONLY_IPV4").is_some() {
+        c.define("TRACY_ONLY_IPV4", None);
+    }
     c
 }
 

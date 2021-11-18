@@ -33,3 +33,12 @@ noexit = []
 # Enable on-demand mode. Traces are only collected when a server connects to the client.
 # Also makes it possible to repeatedly re-connect to a client.
 ondemand = []
+# Do not announce its presence on the network.
+# Defines `TRACY_NO_BROADCAST`
+no-broadcast = []
+# Listen only on localhost instead of all network interfaces.
+# Defines `TRACY_ONLY_LOCALHOST`
+only-localhost = []
+# Do not use IPv6
+# Defines `TRACY_ONLY_IPV4`
+only-ipv4 = []
